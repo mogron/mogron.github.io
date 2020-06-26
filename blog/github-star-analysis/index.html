@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  
+
+  <title>Analysing a Decade of Github Stars</title>
+
+  <meta charset="UTF-8">
+  <meta name="language" content="en">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="google-site-verification" content="8cyiY374WL2LGr87fBghcdJCRx6BaPNBvLjeZlk6tyc" />
+
+  
+  
+
+  <link rel="shortcut icon" type="image/png" href="/favicon.ico" />
+  
+<link rel="stylesheet" href="/css/post.css" /> 
+
+   
+   
+    
+
+<script type="application/ld+json">
+  
+    {
+      "@context" : "http://schema.org",
+      "@type" : "BlogPosting",
+      "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/mogron.github.io\/"
+      },
+      "articleSection" : "blog",
+      "name" : "Analysing a Decade of Github Stars",
+      "headline" : "Analysing a Decade of Github Stars",
+      "description" : "",
+      "inLanguage" : "en-US",
+      "author" : "",
+      "creator" : "",
+      "publisher": "",
+      "accountablePerson" : "",
+      "copyrightHolder" : "",
+      "copyrightYear" : "2020",
+      "datePublished": "2020-06-14 15:04:10 \u002b0200 CEST",
+      "dateModified" : "2020-06-14 15:04:10 \u002b0200 CEST",
+      "url" : "https:\/\/mogron.github.io\/blog\/github-star-analysis\/",
+      "wordCount" : "621",
+      "keywords" : ["Blog"]
+    }
+  
+  </script>
+
+</head>
+
+<body>
+  <div class="burger__container">
+  <div class="burger" aria-controls="navigation" aria-label="Menu">
+    <div class="burger__meat burger__meat--1"></div>
+    <div class="burger__meat burger__meat--2"></div>
+    <div class="burger__meat burger__meat--3"></div>
+  </div>
+</div>
+ 
+
+  <nav class="nav" role="navigation">
+  <ul class="nav__list">
+     
+    
+      <li>
+        <a  href="/">about</a>
+      </li>
+    
+      <li>
+        <a  class="active"
+           href="/blog">blog</a>
+      </li>
+    
+  </ul>
+</nav>
+
+
+  <main>
+    
+<div class="post">
+  <header class="post__header">
+    <h1 class="post__title">Analysing a Decade of Github Stars</h1>
+    <time datetime="2020-06-14 15:04:10 &#43;0200 CEST" class="post__date"
+      >Jun 14 2020</time
+    >
+  </header>
+  <article class="post__content">
+    
+<p>I assembled and analysed a decade of timestamped Github stars, in order to retrospectively analyse large IT trends.
+The analysis is based on Github stars. Stars are a rough proxy for popularity, and an even rougher proxy for value, of a repository. Like any proxy measure, it is flawed. But it&rsquo;s sufficient for a rough trend analysis.
+An additional caveat is that tech represented on Github is a non-representative subset of IT tech overall.</p>
+<h1 id="the-data">The Data</h1>
+<p>I downloaded timestamped Github stars for each repository with more than 4k stars, corresponding to the top 5k repositories ordered by star count on 2020-06-07.</p>
+<h1 id="the-metric">The Metric</h1>
+<p>Simply looking at total stars over time obscures trends, so we look at stars gained over a given range of time. I&rsquo;m interested in trends over 6-24 month periods, so I chose a range of 1 year.
+For each repository, I computed the stars gained over the last year, for each month since repository creation.</p>
+<p>As an example, let&rsquo;s look at angular.js. At around 60k stars, it&rsquo;s one of the most-starred repos on Github.</p>
+<p>From the total number of stars over time it is hard to tell when angular.js was at its peak:</p>
+<p><img src="/img/angularjs_total.png" alt="Angular Total Stars over Time"></p>
+<p>Looking at stars gained per year shows us that angular was most popular around 2013-2015 (until angular2 appeared)</p>
+<p><img src="/img/angularjs_year.png" alt="Angular Stars gained / Year"></p>
+<h1 id="bar-chart-races">Bar Chart Races</h1>
+<p>We can visualize the 1 year star gain as a bar chart race. I used <a href="https://flourish.studio/">Flourish Studio</a> for this.</p>
+<p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/oTIdEGD3iVo" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<a href="https://gfycat.com/gracefulanimatedimperatorangel">gfycat</a></p>
+<p>One thing that stands out is the popularity of educational, informational, or political repos in recent years. This includes the two highest-starred repositories, <a href="https://github.com/freeCodeCamp/freeCodeCamp">FreeCodeCamp</a> and <a href="https://github.com/996icu/996.ICU">996.ICU</a> (for protesting against excessive working hours in Chinese tech companies). Since I&rsquo;m more interested in concrete pieces of tech here, I filtered out many non-tech repositories, using a semi-manually created list (you can filter out pretty much any repository that contains &ldquo;awesome-&rdquo;, &ldquo;tutorial&rdquo;, &ldquo;guide&rdquo;, &ldquo;cheatsheet&rdquo;, and a few others).</p>
+<p>This gives us the following visualization:</p>
+<p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/TRfj-6emZOs" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<a href="https://gfycat.com/quickeveryatlanticbluetang">gfycat</a></p>
+<p>To dive deeper, I created visualizations for specific programming languages. I use the primary language as given by Github in June 2020 for each repository for this. This means switches in programming languages during a repositories lifetime are not represented. Also, in multi-language repositories, Github&rsquo;s definition of the primary language may deviate from human perspective.</p>
+<h1 id="javascript-universe--frontend">JavaScript Universe / Frontend</h1>
+<p>I filtered to repositories where the primary language, as given by Github, is JavaScript, Typescript, Dart, CoffeeScript, CSS, or HTML.</p>
+<p>This gives the following bar chart race:</p>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/idy_fZuOCFk" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<p>We can see the popularity of <a href="https://getbootstrap.com/">Bootstrap</a> in the first half of the decade. <a href="https://jquery.com/">jQuery</a> is popular from 2009 to 2012. 2013-2014 is dominated by <a href="https://angularjs.org/">angularjs</a>, followed in 2015 by <a href="https://reactjs.org/">react</a>, <a href="https://angular.io/">angular2</a>, and then <a href="https://vuejs.org/">vue</a>, and recently <a href="https://flutter.dev/">flutter</a> and <a href="https://svelte.dev/">svelte</a>. Vue seems to be especially popular in China; there is a number of frameworks for integrating Vue with WeChat, Alibaba, etc.</p>
+<h1 id="python">Python</h1>
+<p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/hXH73tQVdeY" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<a href="https://gfycat.com/detailedunlinedarrowana">gfycat</a></p>
+<p>The start of the decade is dominated by web-backend related stuff like <a href="https://flask.palletsprojects.com/en/1.1.x/">flask</a>, <a href="https://www.tornadoweb.org/en/stable/">Tornado</a>, and <a href="https://www.djangoproject.com/">Django</a>. From 2016/2017, we see a lot of deep learning repos popping up.
+Some more noteable appearances at the top of the list: <a href="https://requests.readthedocs.io/en/master/">requests</a>, an elegant HTTP library, <a href="https://github.com/nvbn/thefuck">thefuck</a>, an application that corrects your console commands, <a href="https://certbot.eff.org/">certbot</a> for automatically getting HTTPS certificates, <a href="https://superset.apache.org/">superset</a>, a business intelligence application.</p>
+<p>Below are visualizations for a few more languages which I have not used much, so I won&rsquo;t comment a lot.</p>
+<h1 id="java">Java</h1>
+<p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/VOiqWCOvXIc" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<a href="https://gfycat.com/allanguishedasianelephant">gfycat</a></p>
+<p>Can&rsquo;t comment much on Java, but it&rsquo;s impressive that <a href="https://www.elastic.co/elasticsearch/">elastic search</a> is in the top 15 for the whole decade.</p>
+<h1 id="close-to-the-metal">Close-to-the-metal</h1>
+<p>This includes C++, C, Objective-C, Swift, and Rust.</p>
+<p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/HMAzY4bxon4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<a href="https://gfycat.com/boringorangeamazontreeboa">gfycat</a></p>
+<p>A ton of high-profile software here: Linux and Git, deep learning frameworks, databases.</p>
+<h1 id="golang">Golang</h1>
+<p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+  <iframe src="https://www.youtube.com/embed/B9VNOwx-Br4" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" allowfullscreen title="YouTube Video"></iframe>
+</div>
+
+<a href="https://gfycat.com/perfumedacceptablebunny">gfycat</a></p>
+<p>A lot of <a href="https://www.cncf.io/projects/">cloud native</a> stuff here.</p>
+<h1 id="appendix-tools-used-for-the-analysis">Appendix: Tools used for the analysis</h1>
+<p><a href="https://developer.github.com/v4/explorer/">Github&rsquo;s GraphQL API</a></p>
+<p><a href="https://flourish.studio/">Flourish Studio</a></p>
+<p><a href="https://www.python.org/">Python</a>, <a href="https://jupyter.org/">Jupyter</a></p>
+<p><a href="https://pandas.pydata.org/">Pandas</a>, <a href="https://matplotlib.org/">Matplotlib</a>, <a href="https://requests.readthedocs.io/en/master/">Requests</a></p>
+<p><a href="https://code.visualstudio.com/">VSCode</a></p>
+
+
+    
+  </article>
+  
+
+ <div class="pagination">
+  
+
+  
+</div>
+
+</div>
+
+  </main>
+
+  
+<footer>
+  <div class="social-icons">
+  
+  
+</div>
+
+  <p>© 2020</p>
+</footer>
+
+
+  <script src="/js/index.js"></script>
+  
+<script src="/vendor/prism/prism.js"></script>
+
+</body>
+
+</html>
