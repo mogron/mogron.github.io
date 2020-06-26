@@ -18,7 +18,8 @@
       <pubDate>Sun, 14 Jun 2020 15:04:10 +0200</pubDate>
       
       <guid>https://mogron.github.io/blog/github-star-analysis/</guid>
-      <description>I assembled and analysed a decade of timestamped Github stars, in order to retrospectively analyse large IT trends. The analysis is based on Github stars. Stars are a rough proxy for popularity, and an even rougher proxy for value, of a repository. Like any proxy measure, it is flawed. But it&amp;rsquo;s sufficient for a rough trend analysis. An additional caveat is that tech represented on Github is a non-representative subset of IT tech overall.</description>
+      <description>I assembled and analysed a decade of timestamped Github stars, in order to retrospectively analyse large IT trends. Stars are a rough proxy for popularity of a repository. Like any proxy measure, it is flawed. But it&amp;rsquo;s sufficient for a rough trend analysis. An additional caveat is that tech represented on Github is a non-representative subset of IT tech overall.
+The Data I downloaded timestamped Github stars for each repository with more than 4k stars, corresponding to the top 5k repositories ordered by star count on 2020-06-07.</description>
     </item>
     
   </channel>
