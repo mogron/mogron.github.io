@@ -442,7 +442,7 @@ pre[class*="language-"] {
   color: #032f62
 }
 
-.language-jsx span.[class="comment"] {
+.language-jsx span.comment {
   color: #ffc0cb
 }
 
