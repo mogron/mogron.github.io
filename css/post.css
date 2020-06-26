@@ -668,6 +668,11 @@ pre[class*="language-"] {
   font-size: .8rem
 }
 
+.post__author {
+  color: #9c9c9c;
+  font-size: .8rem
+}
+
 .cp_embed_wrapper {
   margin-top: 1.5rem
 }
